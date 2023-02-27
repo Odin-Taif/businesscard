@@ -17,11 +17,11 @@ export default function Navbar() {
     {
       label: "About",
       href: "/about"
-    },
-    {
-      label: "Contact",
-      href: "/contact"
     }
+    // {
+    //   label: "Contact",
+    //   href: "/contact"
+    // }
   ];
 
   const rightmenu = [

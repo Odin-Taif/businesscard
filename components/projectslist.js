@@ -17,6 +17,7 @@ export default function ProjectList({ project, aspect }) {
           <a
             href={`${project.link}`}
             target={"_blank"}
+            rel="noreferrer"
             className="flex m-2 justify-between cursor-pointer link-effect">
             <BiLinkExternal size={25} className="mr-4" />
             <span className="">{project.title}</span>
@@ -24,6 +25,7 @@ export default function ProjectList({ project, aspect }) {
           <a
             href={`${project.githubLink}`}
             target={"_blank"}
+            rel="noreferrer"
             className="flex m-2 justify-between cursor-pointer link-effect bg-red-900">
             <span className="">source code</span>
             <FaGithub size={25} />

@@ -14,10 +14,6 @@ export default defineType({
       name: 'link',
       title: 'Link',
       type: 'url',
-      validation: (Rule) =>
-        Rule.uri({
-          scheme: ['http', 'https'],
-        }),
     }),
     defineField({
       name: 'githubLink',
@@ -56,6 +52,12 @@ export default defineType({
                   {title: 'groq', value: 'groq'},
                   {title: 'TS', value: 'ts'},
                   {title: 'JS', value: 'js'},
+                  {title: 'Firebase', value: 'firebase'},
+                  {title: 'Angular', value: 'angular'},
+                  {title: 'Sql', value: 'SQL'},
+                  {title: 'postgresQL', value: 'postgresQL'},
+                  {title: 'cyperPanel', value: 'cyperPanel'},
+                  {title: 'wordpress', value: 'wordpress'},
                 ],
               },
             },

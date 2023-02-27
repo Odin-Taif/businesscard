@@ -25,6 +25,10 @@ export default function Navbar() {
   ];
 
   const rightmenu = [
+    {
+      label: "Projects",
+      href: "/projects"
+    }
     // {
     //   label: "Archive",
     //   href: "/archive"

@@ -4,19 +4,14 @@ import Link from "next/link";
 import { NextSeo } from "next-seo";
 import Layout from "@components/layout";
 import Container from "@components/container";
-// import Subpagehero from "@components/sections/subpagehero";
-// import Categories from "@components/categories";
 import { useRouter } from "next/router";
 import { getClient, usePreviewSubscription } from "@lib/sanity";
-
 import { projectsquery, configQuery } from "@lib/groq";
-
 import ProjectList from "@components/projectslist";
 
-export default function project(props) {
+export default function Project(props) {
   const { projectdata, siteconfig, preview } = props;
   const router = useRouter();
-  //console.log(router.query.category);
   const { data: projects } = usePreviewSubscription(projectsquery, {
     initialData: projectdata,
     enabled: preview || router.query.preview !== undefined
@@ -26,7 +21,6 @@ export default function project(props) {
     initialData: siteconfig,
     enabled: preview || router.query.preview !== undefined
   });
-  //console.log(projects);
 
   return (
     <>
@@ -48,7 +42,7 @@ export default function project(props) {
                   alt: ""
                 }
               ],
-              site_name: "Odin"
+              site_name: "Odin ss"
             }}
             twitter={{
               cardType: "summary_large_image"
@@ -56,7 +50,7 @@ export default function project(props) {
           />
           <Container>
             <div className="">
-              {projects.map(project => (
+              {projectdata.map(project => (
                 <ProjectList
                   key={project._id}
                   project={project}
@@ -72,15 +66,14 @@ export default function project(props) {
 }
 
 export async function getStaticProps({ params, preview = false }) {
-  const project = await getClient(preview).fetch(projectsquery);
+  const projects = await getClient(preview).fetch(projectsquery);
   const config = await getClient(preview).fetch(configQuery);
 
   // const categories = (await client.fetch(catquery)) || null;
 
   return {
     props: {
-      projectdata: project,
-      // categories: categories,
+      projectdata: projects,
       siteconfig: { ...config },
       preview
     },

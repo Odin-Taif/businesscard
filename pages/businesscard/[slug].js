@@ -8,6 +8,13 @@ import Link from "next/link";
 import { RiArrowGoBackFill } from "react-icons/ri";
 import { BiLinkExternal } from "react-icons/bi";
 import {
+  LocationMarkerIcon,
+  MailIcon,
+  PhoneIcon
+} from "@heroicons/react/outline";
+import qrlogo from "../../public/Assests/qrcodepic.png";
+import Image from "next/image";
+import {
   configQuery,
   pathAuthorquery,
   singalAuthorsquery
@@ -51,6 +58,44 @@ export default function Businesscard({ siteconfig, author }) {
             ))}
           </div>
         </section>
+        <div className="my-10  text-gray-500 rounded-2xl bg-gray-50 dark:bg-gray-900 dark:text-gray-400 ">
+          <h2 className="text-2xl font-semibold dark:text-white">
+            Contact Odin
+          </h2>
+          <div className="relative m-4 overflow-hidden rounded-md aspect-square odd:translate-y-10 odd:md:translate-y-6 w-40">
+            <Image
+              alt="qrlogo"
+              src={qrlogo}
+              layout="fill"
+              objectFit="cover"
+              sizes="(max-width: 200px) 100vw, 200px"
+              loader={() => value}
+              unoptimized={true}
+            />
+          </div>
+          <div className="mt-5">
+            <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
+              <LocationMarkerIcon className="w-4 h-4" />
+              <span>Rosendalsvagen 23m, Uppsala</span>
+            </div>
+            {siteconfig?.email && (
+              <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
+                <MailIcon className="w-4 h-4" />
+                <a href={`mailto:${siteconfig.email}`}>
+                  {siteconfig.email}
+                </a>
+              </div>
+            )}
+            {siteconfig?.phone && (
+              <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
+                <PhoneIcon className="w-4 h-4" />
+                <a href={`tel:${siteconfig.phone}`}>
+                  {siteconfig.phone}
+                </a>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </Container>
     // </Layout>

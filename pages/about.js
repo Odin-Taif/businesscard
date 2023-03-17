@@ -50,7 +50,7 @@ export default function About({ authors, siteconfig }) {
             and AWS Cloud Computing.
           </p>
           <p>
-            <Link href="/contact">Get in touch</Link>
+            <Link href={`businesscard/odin-taif`}>Get in touch</Link>
           </p>
         </div>
       </Container>

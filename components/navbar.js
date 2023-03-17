@@ -55,7 +55,7 @@ export default function Navbar() {
             <>
               <div className="flex flex-wrap  justify-between md:gap-10 md:flex-nowrap">
                 <div className="flex-col  border-b border-yellow-700  items-center justify-start order-1 hidden w-full md:flex md:flex-row md:justify-end md:w-auto md:order-none md:flex-1">
-                  <Link href={`businesscard/odin-taif`}>
+                  <Link href={`/businesscard/odin-taif`}>
                     <a className="px-5 py-2 text-lg font-medium hover:text-teal-900">
                       <TiBusinessCard size={45} />
                     </a>

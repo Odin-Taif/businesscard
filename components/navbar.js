@@ -10,10 +10,10 @@ import { myLoader } from "@utils/all";
 
 export default function Navbar() {
   const leftmenu = [
-    // {
-    //   label: "Home",
-    //   href: "/"
-    // },
+    {
+      label: "Home",
+      href: "/"
+    },
     {
       label: "About",
       href: "/about"

@@ -68,13 +68,6 @@ export default function Post(props) {
           <Container>
             <div className={""}>
               <section className={"flex flex-col"}>
-                <div className="max-w-[7%] flex flex-row cursor-pointer hover:text-teal-700">
-                  <Link href={"/"} className="">
-                    <a>
-                      <RiArrowGoBackFill size={25} /> | Home
-                    </a>
-                  </Link>
-                </div>
                 {author && <AuthorCard author={author} />}
                 <div className={""}>
                   {author?.social?.map(item => (
@@ -94,10 +87,10 @@ export default function Post(props) {
                   ))}
                 </div>
               </section>
-              <div className="my-10  text-gray-500 rounded-2xl bg-gray-50 dark:bg-gray-900 dark:text-gray-400 ">
-                <h2 className="text-2xl font-semibold dark:text-white">
+              <div className="my-10 p-10 text-gray-500 rounded-2xl bg-gray-50 dark:bg-gray-900 dark:text-gray-400 ">
+                <h3 className="text-2xl font-semibold dark:text-white">
                   Contact Odin
-                </h2>
+                </h3>
                 <div className="relative m-4 overflow-hidden rounded-md aspect-square odd:translate-y-10 odd:md:translate-y-6 w-40">
                   <Image
                     alt="qrlogo"

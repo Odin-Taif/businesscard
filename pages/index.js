@@ -31,7 +31,6 @@ export default function Post(props) {
   const { author, siteconfig, preview } = props;
   // console.log(author);
   const router = useRouter();
-
   const { data: siteConfig } = usePreviewSubscription(configQuery, {
     initialData: siteconfig,
     enabled: preview || router.query.preview !== undefined

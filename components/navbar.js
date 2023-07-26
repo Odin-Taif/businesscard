@@ -10,18 +10,14 @@ import { myLoader } from "@utils/all";
 
 export default function Navbar() {
   const leftmenu = [
-    {
-      label: "Home",
-      href: "/"
-    },
+    // {
+    //   label: "Home",
+    //   href: "/"
+    // },
     {
       label: "About",
       href: "/about"
     }
-    // {
-    //   label: "Contact",
-    //   href: "/contact"
-    // }
   ];
 
   const rightmenu = [
@@ -55,7 +51,7 @@ export default function Navbar() {
             <>
               <div className="flex flex-wrap  justify-between md:gap-10 md:flex-nowrap">
                 <div className="flex-col  border-b border-yellow-700  items-center justify-start order-1 hidden w-full md:flex md:flex-row md:justify-end md:w-auto md:order-none md:flex-1">
-                  <Link href={`/businesscard/odin-taif`}>
+                  <Link href={`/`}>
                     <a className="px-5 py-2 text-lg font-medium hover:text-teal-900">
                       <TiBusinessCard size={45} />
                     </a>
@@ -69,24 +65,6 @@ export default function Navbar() {
                   ))}
                 </div>
                 <div className="flex justify-between w-full md:w-auto">
-                  {/* <Link href="/">
-                    <a className="w-28 dark:hidden">
-                      <Image
-                        src={Logo}
-                        alt="logo"
-                        loader={myLoader}
-                      />
-                    </a>
-                  </Link>
-                  <Link href="/">
-                    <a className="hidden w-28 dark:block">
-                      <Image
-                        src={LogoWhite}
-                        alt="logo"
-                        loader={myLoader}
-                      />
-                    </a>
-                  </Link> */}
                   <Disclosure.Button
                     aria-label="Toggle Menu"
                     className="px-2 py-1 ml-auto text-gray-500 rounded-md md:hidden focus:text-blue-500 focus:outline-none dark:text-gray-300 ">

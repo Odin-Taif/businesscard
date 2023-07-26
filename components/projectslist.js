@@ -26,18 +26,18 @@ export default function ProjectList({ project, aspect }) {
             href={`${project.githubLink}`}
             target={"_blank"}
             rel="noreferrer"
-            className="flex m-2 justify-between cursor-pointer link-effect text-white bg-red-500">
-            <span className="">source code</span>
+            className="flex m-2 p-1 justify-between cursor-pointer link-effect text-white bg-gray-500">
+            <span className="">source code | </span>
             <FaGithub size={25} />
             <BiLinkExternal size={25} />
           </a>
         </div>
         <div>
-          <span>tech stack:</span>
+          <span>Tech Stack Used:</span>
           {project?.techology?.map(item => (
             <span
               key={item._key}
-              className="cursor-pointer px-1 mx-1 link-effect text-white bg-red-500">
+              className=" p-1 mx-1 link-effect text-white bg-gray-500">
               | {item.technology}
             </span>
           ))}
